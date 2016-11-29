@@ -1,4 +1,5 @@
-﻿POC for sorting by multiple properties of a class
+﻿Comparison Chain in C#
+POC for sorting by multiple properties of a class
 Using builder pattern to generate a sorted list
 the builder pattern can set up to 3 sort options and generated a sorted list when calling getsortedlist
 
