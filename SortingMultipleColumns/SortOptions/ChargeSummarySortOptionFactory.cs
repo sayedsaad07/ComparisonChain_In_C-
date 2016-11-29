@@ -8,16 +8,16 @@ namespace SortingMultipleColumns
 {
     internal class ChargeSummarySortOptionFactory
     {
-        internal static IChargeSummarySortOption<ClaimLine> GetInstance(SortingOptions sortOption)
+        internal static IComparer<ClaimLine> GetInstance(SortingOptions sortOption)
         {
             switch (sortOption)
             {
                 case SortingOptions.TotalCharges:
-                    return new TotalChargeSortOption();    
+                    return new TotalChargesComparer();    
                 case SortingOptions.RVU:
-                    return new RVUSortOption();
+                    return new RVUComparer();
                 case SortingOptions.RevCode:
-                    return new RevenueCodeSortOption();
+                    return new RevCodeComparer();
                 case SortingOptions.None:
                 default:
                     return null;

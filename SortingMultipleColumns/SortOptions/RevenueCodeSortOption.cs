@@ -20,16 +20,4 @@ namespace SortingMultipleColumns
             return first.RevCode.CompareTo(second.RevCode);
         }
     }
-    internal class RevenueCodeSortOption : IChargeSummarySortOption<ClaimLine>
-    {
-        public IComparer<ClaimLine> GetComparer()
-        {
-            return new RevCodeComparer(desc: false);
-        }
-
-        public void PreSort(List<ClaimLine> claimLines)
-        {
-            return;
-        }
-    }
 }

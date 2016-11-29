@@ -16,28 +16,19 @@ namespace SortingMultipleColumns
 
         internal IComparer<ClaimLine> SetFirstSort(SortingOptions sortOption)
         {
-            var sortByOption =  ChargeSummarySortOptionFactory.GetInstance(sortOption);
-            if (sortByOption == null) return null;
-            sortByOption.PreSort(SortedClaimlines);
-            FirstSort = sortByOption.GetComparer();
+            FirstSort =  ChargeSummarySortOptionFactory.GetInstance(sortOption);
             return FirstSort;
         }
 
         internal IComparer<ClaimLine> SetSecondSort(SortingOptions sortOption)
         {
-            var sortByOption = ChargeSummarySortOptionFactory.GetInstance(sortOption);
-            if (sortByOption == null) return null;
-            sortByOption.PreSort(SortedClaimlines);
-            SecondSort = sortByOption.GetComparer();
+            SecondSort = ChargeSummarySortOptionFactory.GetInstance(sortOption);
             return SecondSort;
         }
 
         internal IComparer<ClaimLine> SetThirdSort(SortingOptions sortOption)
         {
-            var sortByOption = ChargeSummarySortOptionFactory.GetInstance(sortOption);
-            if (sortByOption == null) return null;
-            sortByOption.PreSort(SortedClaimlines);
-            ThirdSort = sortByOption.GetComparer();
+            ThirdSort = ChargeSummarySortOptionFactory.GetInstance(sortOption);
             return ThirdSort;
         }
 

@@ -26,16 +26,4 @@ namespace SortingMultipleColumns
             return 0;
         }
     }
-    class RVUSortOption : IChargeSummarySortOption<ClaimLine>
-    {
-        public IComparer<ClaimLine> GetComparer()
-        {
-            return new RVUComparer(desc: true);
-        }
-
-        public void PreSort(List<ClaimLine> claimLines)
-        {
-            return;
-        }
-    }
 }

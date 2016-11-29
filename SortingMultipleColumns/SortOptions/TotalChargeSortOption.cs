@@ -26,17 +26,5 @@ namespace SortingMultipleColumns
             return 0;
         }
     }
-    public class TotalChargeSortOption : IChargeSummarySortOption<ClaimLine>
-    {
-        public IComparer<ClaimLine> GetComparer()
-        {
-            return new TotalChargesComparer(desc: true);
-        }
-
-        public void PreSort(List<ClaimLine> claimLines)
-        {
-            return;
-        }
-    }
 
 }
